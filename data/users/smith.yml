@@ -1,0 +1,8 @@
+--- !ruby/object:User
+user: smith
+pw: "$2a$12$INPp.2U25CMe0N1L0b9q7O0oLstqWcC5ZYJJU7d/rVCH76o2ldY/a"
+interests:
+- Basketball
+- Volleyball
+- Golf
+- Golf

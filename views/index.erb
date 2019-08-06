@@ -1,0 +1,28 @@
+<% if session[:success] %>
+  <p><%= session.delete(:success) %></p>
+<% end %>
+
+<% if session[:curr_user].nil? %>
+  <ul>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></li>
+  </ul>
+<% else %>
+  <h2>Hello, <%= session[:curr_user] %>!</h2>
+  <h3>You may perform the following actions:</h3>
+  <ul>
+    <li><a href="/add_interest">Add Interest</a></li>
+    <br>
+    <li>
+      <form action="/logout" method="post">
+        <input type="submit" value="Logout">
+      </form>
+    </li>
+  </ul>
+  <h3>Your interests are:</h3>
+  <ul>
+    <% @interests.each do |interest| %>
+      <li><%= interest %></li>
+    <% end %>
+  </ul>
+<% end %>

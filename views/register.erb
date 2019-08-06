@@ -1,0 +1,14 @@
+<% if session[:error] %>
+  <p><%= session.delete(:error) %></p>
+<% end %>
+  
+<form action="/register" method="post">
+    Username: <input type="text" name="username" required="required">
+    <br>
+    Password: <input type="password" name="password" required="required">
+    <br>
+    Confirm Password: <input type="password" name="confirm_pw" required="required">
+    <br>
+    <br>
+    <input type="submit" value="Register">
+</form>
